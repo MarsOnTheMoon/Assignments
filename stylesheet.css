@@ -30,6 +30,7 @@ ul {
     display: flex;
     list-style: none;
     margin: auto;
+    justify-content: center;
 }
 
 .block,
@@ -81,4 +82,4 @@ li {
     background-color: #540099;
     color: white;
 
-  
+  }
