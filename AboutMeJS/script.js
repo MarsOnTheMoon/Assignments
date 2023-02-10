@@ -1,34 +1,24 @@
-<><h2 id="heading">About Marjorie "Mars" Preval</h2>
+let t = document.createElement("title")
 
-    <p id="body">
-        I'm from Queens, New York
-        I'm a professional photographer, with a BFA from Parsons: The New School.
-        I take photos, play video games, make candles & home decor, and love sewing & embroidery.
-    </p>
-    
-    <img src="photocollage.jpeg"
-        id="photo"
-        width="1000">
+t.innerHTML = "About Marjorie Mars Preval";
 
-        <p class="inline-box">
-            <li><a class="inline-box" href="https://www.youtube.com/" target="_blank">YouTube</a></li>
-            <li><a class="inline-box" href="https://www.bonappetit.com/recipe/ba-best-lasagna" target="_blank">BonAppetit</a></li>
-            <li><a class="inline-box" href="https://creativemarket.com/" target="_blank">Creative Market</a></li>
-        </p> </>  </>
+document.body.appendChild(t)
 
+let img = document.createElement("img");
 
-function start() {
-    //get the reference for the header
-    let x = document.getElementById("heading")[1]
+img.src = "https://images.squarespace-cdn.com/content/5c7586bf34c4e2184f3bcb1f/8f6964c8-368b-4eef-972f-567f2734db4e/photocollage.jpeg?content-type=image%2Fjpeg";
+'https://images.squarespace-cdn.com/content/5c7586bf34c4e2184f3bcb1f/8f6964c8-368b-4eef-972f-567f2734db4e/photocollage.jpeg?content-type=image%2Fjpeg'
 
-    // get the reference for the body
-    let myBody = document.getElementById("body")[1];
+document.body.appendChild(img);
 
-    // creates image element
-    let image = document.getElementById("photo")[1]
+img.id = "myphoto";
 
-    // get the links classed as inline-box
-    let y = document.getElementsByClassName("inline-box")
+img.style.width = "450px";
 
+let d = document.createElement("div");
 
-}
+document.body.appendChild(d);
+
+d.innerHTML = "I'm from Queens, New York. I'm a professional photographer, with a BFA from Parsons: The New School. I take photos, play video games, make candles & home decor, and love sewing & embroidery.";
+
+d.id = "intro";
