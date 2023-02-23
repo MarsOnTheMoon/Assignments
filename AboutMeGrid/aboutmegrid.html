@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=" viewport" content="width=device-width">
+    <title>Grid</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 4em 1fr 2em;
+            grid-template-areas:
+                "g-header g-header g-header"
+                "g-left g-content g-right"
+                "g-left g-footer g-right";
+
+            border: black solid 1px;
+            resize: both;
+            overflow: scroll;
+
+        }
+
+        #header {
+            grid-area: g-header;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lavender;
+            font-family: Helvetica;
+            font-size: 18pt;
+            font-weight: bold;
+            justify-content: stretch;
+        }
+
+        #left {
+            grid-area: g-left;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lightblue;
+            justify-self: start;
+        }
+
+        #content {
+            grid-area: g-content;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: pink;
+        }
+
+        #right {
+            grid-area: g-right;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lightcyan;
+        }
+
+        #footer {
+            grid-area: g-footer;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lemonchiffon;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div id="container">
+        <div id="header">
+            <p>
+                <center>About Marjorie "Mars" Preval</center>
+            </p>
+        </div>
+        
+        <div id="left">
+            <ul>
+                <li><a class="inline-box" href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                <li><a class="inline-box" href="https://www.bonappetit.com/recipe/ba-best-lasagna"
+                        target="_blank">BonAppetit</a></li>
+                <li><a class="inline-box" href="https://creativemarket.com/" target="_blank">Creative Market</a></li>
+            </ul>
+        </div>
+        
+        <div id="content"> <ul>
+           <center>
+            <img src="photocollage.jpeg" width="600px"><br>
+            I'm from Queens, New York<br>
+            I'm a professional photographer, with a BFA from Parsons: The New School.<br>
+            I take photos, play video games, make candles & home decor, and love sewing & embroidery.
+            </center> 
+        </ul>
+    </div>
+        
+    <div id="right">Right Side</div>
+       
+    <div id="footer">Follow Me on Social Media: </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+</html>
