@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=" viewport"  content="width=device-width">
+    <title>Grid</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 4em 1fr 2em;
+            grid-template-areas: 
+            "header header header"
+            "left content right"
+            "left footer right";
+
+            border: black solid 1px;
+            resize: both;
+            overflow: auto;
+        }
+
+
+
+        #header {
+            grid-area: g-header;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lavender;
+            justify-content: ;
+        }
+
+        #left {
+            grid-area: g-left;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lightblue;
+        }
+
+        #content {
+            grid-area: g-content;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: pink;
+        }
+
+        #right {
+            grid-area: g-right;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lightcyan;
+        }
+
+        #footer {
+            grid-area: g-footer;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color:  lemonchiffon;
+        }
+    </style>
+
+</head>
+
+
+<body>
+<div id="container">
+    <div id="header">Header</div>
+    <div id="left">Left Side</div>
+    <div id="content">Content</div>
+    <div id="right">Right Side</div>
+    <div id="footer">Footer</div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
