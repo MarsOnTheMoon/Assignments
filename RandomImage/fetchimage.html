@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+This shows different methods of calling a nodejs server from a web page.
+Once the server starts up, it listens for requests from browsers.
+The basic request returns the HTML for a web page (fetch2.html).
+That's the page you see when you go to that URL.
+
+Using app.get() and app.post() you can set up "routes".
+These are strings in the URL following the URL (https://localhost:8080/)
+and recognized by the server. For example, `app.get('/textresponse')` responds to
+(https://localhost:8080/textresponse)
+
+The difference between GET and POST is that GET has argument valuesin the URL and
+POST has argument values passed as a "body" attribute in the HTTP call.
+
+The server code example here has a mix of GETs and POSTs, some returning text,
+some returning a file, and some returning JSON.
+ -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Random Image By Marjorie Preval</title>
+
+</head>
+
+<body>
+  <button id='b2d' onclick="pressedImages()">Click Here for an Image</button>
+  
+  <div id='response1'>Image Displays Here</div>
+  
+
+  <script>
+  
+    function pressedImages(event) {
+      fetch("/images")
+        .then(function (response) { return response.text(); }) // we are expecting a text response
+        .then(function (data) {
+          document.querySelector('#response1').innerHTML = data;
+        });
+    }
+
+  </script>
+
+</body>
+
+</html>
