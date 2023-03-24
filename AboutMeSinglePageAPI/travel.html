@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=" viewport" content="width=device-width">
+    <title>Grid</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 4em 1fr 2em;
+            grid-template-areas:
+                "g-header g-header g-header"
+                "g-left g-content g-right"
+                "g-left g-footer g-right";
+
+            border: black solid 1px;
+            resize: both;
+            overflow: scroll;
+
+        }
+
+        #header {
+            grid-area: g-header;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lavender;
+            font-family: Helvetica;
+            font-size: 18pt;
+            font-weight: bold;
+            justify-content: stretch;
+        }
+
+        #left {
+            grid-area: g-left;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lightblue;
+            justify-self: start;
+        }
+
+        #content {
+            grid-area: g-content;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: pink;
+        }
+
+        #right {
+            grid-area: g-right;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: lemonchiffon;
+        }
+
+        #footer {
+            grid-area: g-footer;
+            /* grid-column: 1 / 4; */
+            /* grid-row: 1 / 2; */
+            background-color: dimgrey;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div id="container">
+        <div id="header">
+            <center><img src="aboutmars.png" height="60px"></center>
+        </div>
+
+        <div id="left">
+            <p>
+                Menu:<br>
+                <a href="aboutmegrid.html">Home</a><br>
+                <a href="links.html">Links</a><br>
+                <a href="travel.html">Travel Plans</a><br>
+            </p>
+
+        </div>
+
+        <div id="content">
+            <ul>
+                <center>
+                    <p>
+                    <h1>Oh, The Places You'll Go!:</h1>
+                    </p>
+
+                    <p>
+
+                    <table id="places">
+                        <tr>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Countries
+                            </th>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>
+                                31 May
+                            </td>
+                            <td>
+                                Bali, Indonesia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                5 July
+                            </td>
+                            <td>
+                                Japan
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20 July
+                            </td>
+                            <td>
+                                London, United Kingdom
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                14 August
+                            </td>
+                            <td>
+                                Maui, Hawaii
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                25 August
+                            </td>
+                            <td>
+                                Trinidad & Tobago
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                26 October
+                            </td>
+                            <td>
+                                Havana, Cuba
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+
+        </div>
+
+        <div id="right"></div>
+
+        <div id="footer">
+            <center>
+                Follow Me on Social Media:
+                <a href="https://www.instagram.com/mllemars/" target="_parent"><img src="icons/ig.png" height="25"> </a>
+                <a href="https://www.facebook.com/MarjoriePrvl/" target="_parent"><img src="icons/fb.png" height="25">
+                </a>
+                <a href="https://twitter.com/MarzInParis" target="_parent"><img src="icons/twitter.png" height="25">
+                </a>
+
+                Marjorie Preval 2023 ©
+            </center>
+        </div>
+
+
+
+
+</body>
+
+
+
+</html>
